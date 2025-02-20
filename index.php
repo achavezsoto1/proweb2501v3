@@ -14,7 +14,7 @@
     <div>
         <ul>
             <li>
-                <button  onclick="traerpagina('https://proweb2501v3.test/ford/ford.html')">Ford</button>
+                <button  onclick="traerpagina('/ford/ford.html')">Ford</button>
             </li>
             <li>Chevrolet</li>
             <li>Toyota</li>
@@ -30,13 +30,18 @@
         <a href="http://ford.com">Ford</a><br>
         <a href="http://toyota.com">Toyota</a>
     </div>
+    <div>
+        <h3>Prueba PHP</h3>
+        <?php
+            echo "Hola mundo";
+        ?>
+    </div>
 </body>
 
 <script>
 
     function traerpagina(url) {
         div1 = document.querySelector("#cont1");
-
         fetch(url)
             .then(response => response.text())
             .then(data => { div1.innerHTML = data });
@@ -44,3 +49,4 @@
 </script>
 
 </html>
+
